@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-verification-comp',
@@ -7,13 +7,8 @@ import { NgForm } from '@angular/forms';
 })
 export class VerificationCompComponent implements OnInit {
 
-  @ViewChild('verificationForm',null) verificationForm: NgForm;
   constructor() { }
-
-  ngOnInit(): void {
    
-  }
-  
   title:string="Verification Form"
   city:string
   fullname:string
@@ -22,6 +17,12 @@ export class VerificationCompComponent implements OnInit {
   mobile:string
   otp:number
 
+ 
+
+  ngOnInit() {
+   
+  }
+  
   onFormSubmit(verificationform:NgForm){
     console.log(verificationform.value)
   }
@@ -29,4 +30,6 @@ export class VerificationCompComponent implements OnInit {
   onMobileChange(verificationform:any){
     console.log(verificationform.value)
   }
+
+  
 }

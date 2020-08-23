@@ -4,11 +4,13 @@ import  { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VerificationCompComponent } from './verification-comp/verification-comp.component';
+import { VerificationChildComponent } from './verification-child/verification-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VerificationCompComponent
+    VerificationCompComponent,
+    VerificationChildComponent
   ],
   imports: [
     BrowserModule,

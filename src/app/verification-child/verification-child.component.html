@@ -1,0 +1,16 @@
+<form #localForm="ngForm">
+       <div class="form-group">
+           <div class="row">
+               <label class="col-md-3" for="otp">OTP:</label>
+               <input type="otp" class="form-control" name='otp' [(ngModel)]='otp' #myOtp="ngModel">
+               <div *ngIf="myOtp.invalid && (myOtp.dirty || myOtp.touched)" class="alert alert-danger">
+                  <div *ngIf="myOtp.errors.type">  Not a Valid Data </div>
+                  <div *ngIf="myMobile.errors.maxlength"> OTP should not exceed 4 characters  </div>
+             </div>   
+                  
+           </div>
+       </div>
+    
+       
+      
+   </form>   
